@@ -1,7 +1,95 @@
 {{ define "main" }}
-  <section class="empty-state">
-    <p class="eyebrow">PERSONAL NOTES</p>
-    <h1>{{ site.Title }}</h1>
-    <p>内容准备中。</p>
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-rails" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="hero-axis hero-axis-a" aria-hidden="true"></div>
+    <div class="hero-axis hero-axis-b" aria-hidden="true"></div>
+
+    <div class="hero-copy">
+      <div class="hero-meta">
+        <span>FIELD / 001</span>
+        <span>STATUS / AWAKE</span>
+      </div>
+      <h1 id="hero-title" aria-label="Lych1e">
+        <span>LYCH</span><span>1E</span>
+      </h1>
+      <p class="hero-statement">在噪声里<br>辨认结构。</p>
+      <div class="hero-readout" aria-label="信号读数">
+        <span>04</span>
+        <span class="readout-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        <span>63 HZ</span>
+      </div>
+    </div>
+
+    <figure class="portrait-stage">
+      <img src="{{ `images/portrait.png` | relURL }}" alt="Lych1e" width="800" height="800">
+      <figcaption>
+        <span>FRAME_01</span>
+        <span>4C 59 43 48 31 45</span>
+      </figcaption>
+      <span class="focus-mark focus-mark-a" aria-hidden="true"></span>
+      <span class="focus-mark focus-mark-b" aria-hidden="true"></span>
+    </figure>
+
+    <div class="hero-sidecode" aria-hidden="true">
+      <span>0x004C</span>
+      <span>0x0059</span>
+      <span>0x0043</span>
+      <span>0x0048</span>
+    </div>
+    <p class="hero-scroll" aria-hidden="true">SCROLL / TRACE</p>
+  </section>
+
+  <section class="interlude" aria-label="站点宣言">
+    <div class="interlude-index" aria-hidden="true">
+      <span>002</span>
+      <span>∆ 12.8</span>
+    </div>
+    <blockquote>把不可见的秩序，<br>调到刚好能被听见。</blockquote>
+    <div class="waveform" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </section>
+
+  <section class="notes-section" id="notes" aria-labelledby="notes-title">
+    <header class="section-header">
+      <div>
+        <p class="eyebrow">TRANSMISSION / LOG</p>
+        <h2 id="notes-title">记录</h2>
+      </div>
+      <span class="section-code">[ 0000 — ∞ ]</span>
+    </header>
+
+    {{ $posts := where site.RegularPages "Section" "posts" }}
+    {{ with first 6 $posts.ByDate.Reverse }}
+      <ol class="note-list">
+        {{ range . }}
+          <li>
+            <a href="{{ .RelPermalink }}">
+              <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "2006.01.02" }}</time>
+              <span class="note-title">{{ .LinkTitle }}</span>
+              <span class="note-arrow" aria-hidden="true"><i data-lucide="arrow-up-right"></i></span>
+            </a>
+          </li>
+        {{ end }}
+      </ol>
+    {{ else }}
+      <div class="empty-log">
+        <span class="empty-number" aria-hidden="true">00</span>
+        <p>频道尚未写入。<br>第一条记录会从这里开始。</p>
+        <div class="empty-cursor" aria-hidden="true"></div>
+      </div>
+    {{ end }}
+  </section>
+
+  <section class="closing-band" aria-hidden="true">
+    <p><span>STAY</span><span>CURIOUS</span></p>
+    <div class="closing-ticks">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
   </section>
 {{ end }}

@@ -2,9 +2,14 @@ baseURL = "https://lych1e1.github.io/"
 languageCode = "zh-CN"
 title = "Lych1e"
 enableRobotsTXT = true
+summaryLength = 28
 
 [params]
-  description = "Lych1e 的个人站点"
+  description = "在噪声里辨认结构。"
+  accent = "#f4c542"
+
+[permalinks]
+  posts = "/notes/:contentbasename/"
 
 [markup]
   [markup.highlight]

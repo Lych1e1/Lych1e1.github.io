@@ -1,19 +1,21 @@
 {{ define "main" }}
-  <section class="content-page">
-    <header>
+  <section class="archive-page">
+    <header class="archive-header">
+      <p class="eyebrow">INDEX / {{ len .Pages | printf "%04d" }}</p>
       <h1>{{ .Title }}</h1>
       {{ with .Content }}<div>{{ . }}</div>{{ end }}
     </header>
-    <ol class="post-list">
-      {{ range .Pages }}
+    <ol class="note-list archive-list">
+      {{ range .Pages.ByDate.Reverse }}
         <li>
-          <time class="post-meta" datetime="{{ .Date.Format `2006-01-02` }}">
-            {{ .Date.Format "2006-01-02" }}
-          </time>
-          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          <a href="{{ .RelPermalink }}">
+            <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "2006.01.02" }}</time>
+            <span class="note-title">{{ .LinkTitle }}</span>
+            <span class="note-arrow" aria-hidden="true"><i data-lucide="arrow-up-right"></i></span>
+          </a>
         </li>
       {{ else }}
-        <li>暂无内容。</li>
+        <li class="archive-empty">暂无记录。</li>
       {{ end }}
     </ol>
   </section>

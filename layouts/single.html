@@ -1,9 +1,17 @@
 {{ define "main" }}
-  <article class="content-page">
-    <header>
-      <p class="post-meta">{{ .Date.Format "2006-01-02" }}</p>
+  <article class="article-page">
+    <a class="back-link" href="{{ site.Home.RelPermalink }}#notes">
+      <i data-lucide="arrow-left" aria-hidden="true"></i>
+      INDEX
+    </a>
+    <header class="article-header">
+      <p class="eyebrow">ENTRY / {{ .Date.Format "20060102" }}</p>
       <h1>{{ .Title }}</h1>
+      <div class="article-meta">
+        <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "2006.01.02" }}</time>
+        <span>{{ .ReadingTime | printf "%02d" }} MIN</span>
+      </div>
     </header>
-    <div>{{ .Content }}</div>
+    <div class="article-body">{{ .Content }}</div>
   </article>
 {{ end }}

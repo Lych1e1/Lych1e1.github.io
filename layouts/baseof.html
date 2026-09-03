@@ -1,18 +1,29 @@
 <!doctype html>
-<html lang="{{ site.Language.LanguageCode }}">
+<html lang="{{ site.Language.LanguageCode }}" data-theme="dark">
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body>
+  <body class="page-{{ .Kind }}">
     <header class="site-header">
-      <a class="site-title" href="{{ site.Home.RelPermalink }}">Lych1e<span>.</span></a>
+      <a class="site-title" href="{{ site.Home.RelPermalink }}" aria-label="Lych1e 首页">
+        <span class="site-mark">L/</span>
+        <span>LYCH1E</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="{{ site.Home.RelPermalink }}#notes">INDEX</a>
+        <span class="nav-coordinate" aria-hidden="true">31.2304 / 121.4737</span>
+        <button class="icon-button" id="theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+          <i data-lucide="sun" aria-hidden="true"></i>
+        </button>
+      </nav>
     </header>
-    <main class="page-shell">
+    <main>
       {{ block "main" . }}{{ end }}
     </main>
     <footer class="site-footer">
-      <span>&copy; {{ now.Year }} Lych1e</span>
-      <span>UTC +08</span>
+      <span>END OF SIGNAL</span>
+      <span>&copy; {{ now.Year }} LYCH1E</span>
+      <span>CN.EAST / UTC+08</span>
     </footer>
   </body>
 </html>
