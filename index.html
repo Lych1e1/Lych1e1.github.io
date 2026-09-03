@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lych1e 的个人主页，记录逆向工程、系统研究与软件工具。"
+    />
+    <meta name="theme-color" content="#f4f3ef" />
+    <meta property="og:title" content="Lych1e | Security, Systems, Software" />
+    <meta
+      property="og:description"
+      content="逆向工程、系统研究与软件工具。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lych1e1.github.io/" />
+    <meta property="og:image" content="https://lych1e1.github.io/assets/avatar.png" />
+    <title>Lych1e | Security, Systems, Software</title>
+    <link rel="icon" href="assets/avatar.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="返回首页">Lych1e<span>.</span></a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#work">项目</a>
+        <a href="#log">动态</a>
+        <a href="#about">关于</a>
+      </nav>
+      <div class="header-actions">
+        <button
+          class="icon-button"
+          id="theme-toggle"
+          type="button"
+          title="切换深浅主题"
+          aria-label="切换深浅主题"
+        >
+          <i data-lucide="moon" aria-hidden="true"></i>
+        </button>
+        <a
+          class="icon-button"
+          href="https://github.com/Lych1e1"
+          target="_blank"
+          rel="noreferrer"
+          title="GitHub"
+          aria-label="访问 GitHub 主页"
+        >
+          <i data-lucide="github" aria-hidden="true"></i>
+        </a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-portrait"
+          src="assets/avatar.png"
+          alt="Lych1e 的 GitHub 头像"
+          width="800"
+          height="800"
+        />
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">SECURITY / SYSTEMS / SOFTWARE</p>
+          <h1 id="hero-title">Lych1e</h1>
+          <p class="hero-lead">拆解复杂系统，留下清晰记录。</p>
+          <p class="hero-copy">
+            关注逆向工程、程序分析与底层系统。这里汇集正在推进的实验、工具和技术笔记。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">
+              查看项目
+              <i data-lucide="arrow-down-right" aria-hidden="true"></i>
+            </a>
+            <a
+              class="button button-secondary"
+              href="https://github.com/Lych1e1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-index" aria-hidden="true">
+          <span>31.23 N</span>
+          <span>121.47 E</span>
+          <span>UTC +08</span>
+        </div>
+      </section>
+
+      <section class="section work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">SELECTED WORK</p>
+            <h2 id="work-title">近期项目</h2>
+          </div>
+          <a
+            class="text-link"
+            href="https://github.com/Lych1e1?tab=repositories"
+            target="_blank"
+            rel="noreferrer"
+          >
+            全部仓库
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="project-list" id="project-list">
+          <article class="project-row reveal" data-repo="flutter-win64-re">
+            <div class="project-number">01</div>
+            <div class="project-main">
+              <p class="project-kind">REVERSE ENGINEERING</p>
+              <h3>Flutter Win64 RE</h3>
+              <p>面向 Windows x64 Flutter/Dart AOT 应用的逆向工程研究与案例记录。</p>
+            </div>
+            <div class="project-meta">
+              <span data-field="updated">持续更新</span>
+              <a
+                href="https://github.com/Lych1e1/flutter-win64-re"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="查看 Flutter Win64 RE 仓库"
+                title="查看仓库"
+              >
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-row reveal" data-repo="jsdeob-workbench">
+            <div class="project-number">02</div>
+            <div class="project-main">
+              <p class="project-kind">PROGRAM ANALYSIS</p>
+              <h3>JS Deob Workbench</h3>
+              <p>可视化处理混淆 JavaScript，串联转换、检查 AST 变化并编写复用插件。</p>
+            </div>
+            <div class="project-meta">
+              <span data-field="updated">实验项目</span>
+              <a
+                href="https://github.com/Lych1e1/jsdeob-workbench"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="查看 JS Deob Workbench 仓库"
+                title="查看仓库"
+              >
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-row reveal" data-repo="AntiOllvm">
+            <div class="project-number">03</div>
+            <div class="project-main">
+              <p class="project-kind">BINARY RESEARCH</p>
+              <h3>AntiOllvm</h3>
+              <p>围绕 OLLVM 控制流平坦化与运行时行为展开的逆向分析实验。</p>
+            </div>
+            <div class="project-meta">
+              <span data-field="updated">研究记录</span>
+              <a
+                href="https://github.com/Lych1e1/AntiOllvm"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="查看 AntiOllvm 仓库"
+                title="查看仓库"
+              >
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section log-section" id="log" aria-labelledby="log-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">LAB LOG</p>
+            <h2 id="log-title">公开动态</h2>
+          </div>
+          <p class="section-note" id="repo-status" aria-live="polite">正在同步 GitHub</p>
+        </div>
+        <ol class="activity-list" id="activity-list">
+          <li class="activity-item is-loading">
+            <span class="activity-date">--.--</span>
+            <span class="activity-mark" aria-hidden="true"></span>
+            <span>读取最近更新...</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="about-layout reveal">
+          <p class="eyebrow">ABOUT</p>
+          <div>
+            <h2 id="about-title">保持好奇，持续构建。</h2>
+            <p>
+              从二进制、运行时到开发工具，我更关心系统实际如何工作，以及如何把复杂问题变成可以验证的代码。
+            </p>
+          </div>
+          <a
+            class="about-profile"
+            href="https://github.com/Lych1e1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="assets/avatar.png" alt="" width="48" height="48" />
+            <span>
+              <strong>@Lych1e1</strong>
+              <small>GitHub Profile</small>
+            </span>
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>&copy; <span id="year">2026</span> Lych1e</span>
+      <span>Shanghai / UTC +08</span>
+    </footer>
+  </body>
+</html>
