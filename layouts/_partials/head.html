@@ -1,11 +1,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{{ .Description | default site.Params.description }}">
-<meta name="theme-color" content="#11120f">
+<meta name="theme-color" content="#332d5b">
 <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}">
 <meta property="og:description" content="{{ .Description | default site.Params.description }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
-<meta property="og:image" content="{{ `images/portrait.png` | absURL }}">
+<meta property="og:image" content="{{ `images/hero-color.png` | absURL }}">
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="icon" href="{{ `favicon.svg` | relURL }}" type="image/svg+xml">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>

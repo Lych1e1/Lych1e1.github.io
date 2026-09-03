@@ -1,56 +1,64 @@
 {{ define "main" }}
   <section class="hero" id="top" aria-labelledby="hero-title">
-    <div class="hero-rails" aria-hidden="true">
-      <span></span><span></span><span></span><span></span>
-    </div>
-    <div class="hero-axis hero-axis-a" aria-hidden="true"></div>
-    <div class="hero-axis hero-axis-b" aria-hidden="true"></div>
+    <figure class="hero-art">
+      <img src="{{ `images/hero-color.png` | relURL }}" alt="Lych1e" width="733" height="710">
+      <figcaption>
+        <span>FRAME / 09</span>
+        <span>RGB / ORIGINAL</span>
+      </figcaption>
+    </figure>
 
     <div class="hero-copy">
       <div class="hero-meta">
-        <span>FIELD / 001</span>
-        <span>STATUS / AWAKE</span>
+        <span>CHANNEL_01</span>
+        <span>LIVE / +08</span>
       </div>
       <h1 id="hero-title" aria-label="Lych1e">
-        <span>LYCH</span><span>1E</span>
+        <span>LY</span>
+        <span>CH1E</span>
       </h1>
-      <p class="hero-statement">在噪声里<br>辨认结构。</p>
-      <div class="hero-readout" aria-label="信号读数">
-        <span>04</span>
-        <span class="readout-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
-        <span>63 HZ</span>
-      </div>
+      <p class="hero-statement">把复杂的事，<br>拆成清晰的节奏。</p>
+      <a class="hero-action" href="#notes">
+        <span>进入记录</span>
+        <i data-lucide="arrow-down-right" aria-hidden="true"></i>
+      </a>
     </div>
 
-    <figure class="portrait-stage">
-      <img src="{{ `images/portrait.png` | relURL }}" alt="Lych1e" width="800" height="800">
-      <figcaption>
-        <span>FRAME_01</span>
-        <span>4C 59 43 48 31 45</span>
-      </figcaption>
-      <span class="focus-mark focus-mark-a" aria-hidden="true"></span>
-      <span class="focus-mark focus-mark-b" aria-hidden="true"></span>
-    </figure>
-
-    <div class="hero-sidecode" aria-hidden="true">
-      <span>0x004C</span>
-      <span>0x0059</span>
-      <span>0x0043</span>
-      <span>0x0048</span>
+    <div class="hero-signal" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
     </div>
-    <p class="hero-scroll" aria-hidden="true">SCROLL / TRACE</p>
+    <div class="hero-code" aria-hidden="true">4C / 59 / 43 / 48 / 31 / 45</div>
+    <span class="hero-tag hero-tag-a" aria-hidden="true">A</span>
+    <span class="hero-tag hero-tag-b" aria-hidden="true">B</span>
   </section>
 
-  <section class="interlude" aria-label="站点宣言">
-    <div class="interlude-index" aria-hidden="true">
-      <span>002</span>
-      <span>∆ 12.8</span>
+  <section class="ticker" aria-hidden="true">
+    <span class="ticker-chip ticker-chip-pink"></span>
+    <p>TRACE THE SHAPE</p>
+    <span>·</span>
+    <p>KEEP THE RHYTHM</p>
+    <span>·</span>
+    <p>READ BETWEEN LINES</p>
+    <span class="ticker-chip ticker-chip-mint"></span>
+  </section>
+
+  <section class="manifesto" aria-label="站点宣言">
+    <div class="manifesto-copy">
+      <p class="eyebrow">FIELD NOTE / 002</p>
+      <blockquote>让线索彼此咬合，<br>直到轮廓出现。</blockquote>
+      <div class="manifesto-index">
+        <span>31.2304° N</span>
+        <span>121.4737° E</span>
+      </div>
     </div>
-    <blockquote>把不可见的秩序，<br>调到刚好能被听见。</blockquote>
-    <div class="waveform" aria-hidden="true">
-      <span></span><span></span><span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span><span></span><span></span>
+    <div class="rhythm-panel" aria-hidden="true">
+      <div class="rhythm-label"><span>LOW</span><span>HIGH</span></div>
+      <div class="rhythm-bars">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <p>63.4 / 125.8 / 251.6</p>
     </div>
   </section>
 
@@ -78,18 +86,24 @@
       </ol>
     {{ else }}
       <div class="empty-log">
-        <span class="empty-number" aria-hidden="true">00</span>
-        <p>频道尚未写入。<br>第一条记录会从这里开始。</p>
-        <div class="empty-cursor" aria-hidden="true"></div>
+        <div class="empty-icon" aria-hidden="true"><i data-lucide="radio-tower"></i></div>
+        <div>
+          <p class="empty-label">BUFFER / EMPTY</p>
+          <p>尚未写入。<br>下一条记录会在这里出现。</p>
+        </div>
+        <span class="empty-sequence" aria-hidden="true">00:00:00</span>
       </div>
     {{ end }}
   </section>
 
   <section class="closing-band" aria-hidden="true">
-    <p><span>STAY</span><span>CURIOUS</span></p>
-    <div class="closing-ticks">
-      <span></span><span></span><span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span><span></span><span></span>
+    <div class="closing-copy">
+      <span>KEEP</span>
+      <span>TUNING</span>
     </div>
+    <div class="closing-strings">
+      <i></i><i></i><i></i><i></i>
+    </div>
+    <span class="closing-code">∞ / REPEAT</span>
   </section>
 {{ end }}

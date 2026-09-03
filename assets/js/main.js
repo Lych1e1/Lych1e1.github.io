@@ -11,7 +11,7 @@ function syncThemeControl() {
   toggle.innerHTML = `<i data-lucide="${dark ? "sun" : "moon"}" aria-hidden="true"></i>`;
   toggle.setAttribute("aria-label", dark ? "切换到浅色主题" : "切换到深色主题");
   toggle.setAttribute("title", dark ? "切换到浅色主题" : "切换到深色主题");
-  themeColor.content = dark ? "#11120f" : "#eef1ec";
+  themeColor.content = dark ? "#211e3d" : "#f1f3ed";
   renderIcons();
 }
 
