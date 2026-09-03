@@ -1,7 +1,25 @@
 # Lych1e1.github.io
 
-Personal site for [Lych1e](https://github.com/Lych1e1), published with GitHub Pages.
+Minimal Hugo scaffold for the personal site at `https://lych1e1.github.io/`.
 
-## Local preview
+## Local development
 
-Open `index.html` directly, or serve the directory with any static HTTP server.
+```powershell
+hugo server --buildDrafts
+```
+
+Open `http://localhost:1313/`.
+
+## Create content
+
+```powershell
+hugo new content posts/example.md
+```
+
+## Build
+
+```powershell
+hugo --gc --minify
+```
+
+Pushing `main` runs `.github/workflows/hugo.yml` and deploys the generated `public/` directory to GitHub Pages.

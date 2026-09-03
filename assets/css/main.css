@@ -1,0 +1,169 @@
+:root {
+  color-scheme: light dark;
+  --background: #f5f5f1;
+  --foreground: #181916;
+  --muted: #676a62;
+  --line: #d0d2cb;
+  --accent: #ef6a47;
+  --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #151613;
+    --foreground: #f1f0e9;
+    --muted: #a5a99f;
+    --line: #3b3e37;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+body {
+  min-width: 0;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.site-header,
+.site-footer,
+.page-shell {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  min-height: 4rem;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-title {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-title span {
+  color: var(--accent);
+}
+
+.page-shell {
+  min-height: calc(100vh - 9rem);
+}
+
+.empty-state {
+  display: flex;
+  min-height: calc(100vh - 9rem);
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 4rem;
+}
+
+.eyebrow,
+.post-meta,
+.site-footer {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4.5rem;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.empty-state > p:last-child {
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.content-page {
+  max-width: 48rem;
+  padding-block: 5rem;
+}
+
+.content-page h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.content-page img,
+.content-page video {
+  max-width: 100%;
+  height: auto;
+}
+
+.content-page pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.post-list {
+  margin: 3rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.post-list li {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-footer {
+  display: flex;
+  min-height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 40rem) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .content-page h1 {
+    font-size: 2.25rem;
+  }
+
+  .post-list li {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}

@@ -1,0 +1,11 @@
+baseURL = "https://lych1e1.github.io/"
+languageCode = "zh-CN"
+title = "Lych1e"
+enableRobotsTXT = true
+
+[params]
+  description = "Lych1e 的个人站点"
+
+[markup]
+  [markup.highlight]
+    noClasses = false

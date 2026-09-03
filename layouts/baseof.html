@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="{{ site.Language.LanguageCode }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="{{ site.Home.RelPermalink }}">Lych1e<span>.</span></a>
+    </header>
+    <main class="page-shell">
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer class="site-footer">
+      <span>&copy; {{ now.Year }} Lych1e</span>
+      <span>UTC +08</span>
+    </footer>
+  </body>
+</html>

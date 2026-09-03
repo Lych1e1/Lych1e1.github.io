@@ -1,0 +1,10 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ .Description | default site.Params.description }}">
+<meta name="theme-color" content="#f5f5f1">
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="icon" href="{{ `favicon.svg` | relURL }}" type="image/svg+xml">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+{{ with resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+{{ end }}
