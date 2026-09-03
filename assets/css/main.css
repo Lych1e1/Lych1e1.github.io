@@ -719,11 +719,12 @@ img {
 .article-header h1,
 .error-page h1 {
   margin: 0;
-  font-size: 5rem;
+  font-size: 4.2rem;
   font-weight: 800;
   letter-spacing: 0;
   line-height: 1.08;
   overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 .archive-header > div {
@@ -779,6 +780,41 @@ img {
   font-size: 1.03rem;
 }
 
+.article-body > p:first-child {
+  margin-top: 0;
+  color: var(--plum);
+  font-size: 1.24rem;
+  font-weight: 500;
+  line-height: 1.85;
+}
+
+[data-theme="dark"] .article-body > p:first-child {
+  color: var(--yellow);
+}
+
+.article-body p,
+.article-body ul,
+.article-body ol {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.article-body ul,
+.article-body ol {
+  padding-left: 1.4rem;
+}
+
+.article-body li {
+  margin: 0.55rem 0;
+  padding-left: 0.35rem;
+}
+
+.article-body li::marker {
+  color: var(--coral);
+  font-family: var(--mono);
+  font-weight: 600;
+}
+
 .article-body h2,
 .article-body h3 {
   margin: 3rem 0 1rem;
@@ -818,6 +854,44 @@ img {
   color: var(--muted);
 }
 
+.article-body blockquote p {
+  margin: 0;
+}
+
+.article-body hr {
+  height: 3px;
+  margin: 3.5rem 0;
+  border: 0;
+  background: var(--pink);
+}
+
+.article-body table {
+  display: table;
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.article-body th,
+.article-body td {
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.article-body th {
+  background: var(--yellow);
+  color: var(--plum-deep);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+
+.article-body tbody tr:nth-child(even) {
+  background: var(--surface);
+}
+
 .article-body code {
   font-family: var(--mono);
   font-size: 0.9em;
@@ -839,6 +913,25 @@ img {
   border-radius: 3px;
   background: var(--plum-deep);
   color: #fff8eb;
+}
+
+.article-body .footnotes {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.article-body .footnotes hr {
+  display: none;
+}
+
+.article-body .footnote-ref,
+.article-body .footnote-backref {
+  color: var(--coral);
+  font-family: var(--mono);
+  font-weight: 600;
 }
 
 .error-page {
@@ -1110,6 +1203,17 @@ img {
 
   .article-body {
     margin-top: 3rem;
+  }
+
+  .article-body > p:first-child {
+    font-size: 1.08rem;
+  }
+
+  .article-body table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
 
